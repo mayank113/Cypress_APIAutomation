@@ -6,8 +6,8 @@ describe('get api user', () => {
 
   it('passes', () => {
     cy.request({
-method : "GET",
-url : "https://dummyjson.com/products"
+method : 'GET',
+url : 'https://dummyjson.com/products'
 
     }).then((res)=>{
 
@@ -19,7 +19,7 @@ url : "https://dummyjson.com/products"
     cy.request({
     method : "GET",
     url : "https://gorest.co.in/public/v2/users",
-    Headers : {
+    headers : {
               'authorization' : "Bearer " + accessToken
     }
 
