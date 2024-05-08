@@ -1,0 +1,13 @@
+npm init
+npm install cypress --save-dev
+npx cypress open
+or 
+npm install --global yarn
+yarn run cypress open
+
+200 Ok Status
+201 Created Successfull
+400 Bad Request
+401 UnAutoried
+404 Not Found
+500 Server Internal Error
