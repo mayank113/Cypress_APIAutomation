@@ -22,14 +22,35 @@ it('Create User', () => {
     },
     body:{
         "name":datajson.name,
-        "gender":"male",
+        "gender":datajson.gender,
         "email":Email,
-        "status":"active"
+        "status":datajson.status
     }
 
     }).then((res)=>{
-cy.log(JSON.stringify(res));
+    cy.log(JSON.stringify(res));
       expect(res.status).to.eq(201)
+      expect(res.body).has.property('name',datajson.name)
+      expect(res.body).has.property('status',datajson.status)
+      expect(res.body).has.property('gender',datajson.gender)
+      expect(res.body).has.property('email',Email)
+    }).then((res) =>{
+//get user details created
+    let userid = 6896061
+    cy.log("User ID", userid)
+    cy.request({
+        method : "GET",
+        url : 'https://gorest.co.in/public/v2/users/'+ userid,
+        headers : {
+                  'authorization' : "Bearer " + accessToken
+        },  
+    }).then((res)=>{
+
+        expect(res.status).to.eq(200)
+
     })
+
+    })
+
   })
 })
