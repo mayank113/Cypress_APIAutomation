@@ -1,5 +1,6 @@
 npm init
 npm install cypress --save-dev
+or npm install --save-dev cypress@10.1.0
 npx cypress open
 or 
 npm install --global yarn
