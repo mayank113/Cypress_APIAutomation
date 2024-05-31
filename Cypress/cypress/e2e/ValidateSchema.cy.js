@@ -9,6 +9,7 @@ it('Validate Get Request Schema',() =>{
 cy.request({
 method: 'GET',
 url: 'https://fakestoreapi.com/products',
+//query parameter
 qs: {limit:1}
 }).then((response)=>{
 
