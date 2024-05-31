@@ -2,7 +2,7 @@
 
 describe('get api user', () => {
 
-  let accessToken = "ca5bc36b2f935ea61824051239a9fcff74b3045312238460b9938a03dd96b372" 
+  let accessToken = "d458f0e0f3ea8f2fd0df52e1a825c7401dcea53fb7574290c6cc0b8ec31d7746" 
 
   it('passes', () => {
     cy.request({

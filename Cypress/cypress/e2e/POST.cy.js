@@ -1,6 +1,6 @@
 /// <refrence types = "Cypress" />
 describe('Post User create',() =>{
-    let accessToken = 'b36af3df2be8b313967328ae6120e97366af49a77255cf5b607b833cfba98dd0'
+    let accessToken = 'd458f0e0f3ea8f2fd0df52e1a825c7401dcea53fb7574290c6cc0b8ec31d7746'
     let Email = ""
     let RandomText = ""
     const characters ='d27cfd2572ad5271a9e0f3ace385a793ef9b744721cddf8d10a6cb8be331cc4c'
@@ -56,7 +56,6 @@ it('Create User', () => {
         cy.log("Status: " + res1.body[0].status)
 
     })
-
     })
 
   })
